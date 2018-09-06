@@ -6,40 +6,27 @@ The paper is under review at the moment and I will update with a link on publica
 We are here depositing the scripts that were central to the data analysis in the paper: **monophylyPlot.py** and **repClusters.py**.
 
 ## monophylyPlot.py
-Author: Jesper Svedberg (jesper.svedberg@ebc.uu.se)
-
-Version: 0.1
+  Author: Jesper Svedberg (jesper.svedberg@ebc.uu.se)
+  Version: 0.1
 
 The purpose of this script is to plot signals of monophyly for a subset of individuals in a population genomic dataset. It uses phylogenetic trees inferred from small windows over a chromosome. These phylogenetic trees can most easily be generated using a pipeline developed by Simon H. Martin, which can be found here: https://github.com/simonhmartin/genomics_general/
 
 These following scripts are used:
+  https://github.com/simonhmartin/genomics_general/blob/master/VCF_processing/parseVCF.py
+  This parses SNP data in VCF format and converts them to the "geno" format.
 
-https://github.com/simonhmartin/genomics_general/blob/master/VCF_processing/parseVCF.py
-
-This parses SNP data in VCF format and converts them to the "geno" format.
-
-
-https://github.com/simonhmartin/genomics_general/blob/master/phylo/phyml_sliding_windows.py
-
-This splits up a chromosome into short windows and uses PhyML to generate phylogenetic trees. monophylyPlot.py can then parse the output 
-
-from this script.
+  https://github.com/simonhmartin/genomics_general/blob/master/phylo/phyml_sliding_windows.py
+  This splits up a chromosome into short windows and uses PhyML to generate phylogenetic trees. monophylyPlot.py can then parse the output from this script.
 
 **monophylyPlot.py** takes a subset of individuals in a population genomic dataset and generates plots showing whether these strains form a monophyletic cluster in the phylogenetic tree, or whether just a subset of the strains form a monophyletic cluster. Based on this, recombination events can be inferred. You can also add further individuals in a sort of outgroup and plot where this outgroup clusters with the first group. Given the proper input several plots will be generated in PNG or SVG format. The script used the Python library ETE Toolkit (http://etetoolkit.org/) to parse the phylogenetic trees.
 
 Dependencies:
-
-Python 2.7
-
-ete3
-
-pandas
-
-seaborn
-
-matplotlib
-
-numpy
+  Python 2.7
+  ete3
+  pandas
+  seaborn
+  matplotlib
+  numpy
 
 At the moment this is not a script that is fairly limited in scope and is not very friendly to other datasets than what the one it was developped for. The main limitation is that the tested subgroup has to be four strains. The other limitation is that an outgroup must be specified.
 
