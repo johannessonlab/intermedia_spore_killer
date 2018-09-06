@@ -78,6 +78,10 @@ Dependencies:
 
 Parameters:
 ```
+positional arguments:
+  filename              RepeatMasker file name
+
+optional arguments:
   -h, --help            show this help message and exit
   -s SIZE, --size SIZE  Chromosome size. Default: Last line in file.
   -w WINDOW, --window WINDOW
