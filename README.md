@@ -1,5 +1,5 @@
 # intermedia_spore_killer
-Scripts released with the paper Svedberg et al. "Convergent evolution of complex genomic rearrangements in two fungal meiotic drive elements".
+Scripts released with the paper Svedberg et al. "Convergent evolution of complex genomic rearrangements in two fungal meiotic drive elements", (Nature Communications) 2018. https://www.nature.com/articles/s41467-018-06562-x
 
 The paper is under review at the moment and I will update with a link on publication.
 
@@ -72,7 +72,7 @@ It requires the following input files:
 
 Dependencies:
 * Python 2.7
-* BipPython
+* BioPython
 * numpy
 * scipy
 
